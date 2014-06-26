@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- SQL dialect for generate.pojo and ddl-->
+<!-- 	<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property> -->
+		<property name="dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+		
+
+		<!-- jdbc properties for generate.pojo 
+		<property name="hibernate.connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:jtds:sqlserver://localhost:1433/powerlong</property>
+		<property name="hibernate.connection.username">sa</property>
+		<property name="hibernate.connection.password">sa</property>
+ 		-->
+		
+<!-- 		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@192.168.1.51:1521:cms</property>
+		<property name="hibernate.connection.username">cms</property>
+		<property name="hibernate.connection.password">cms</property> -->
+		
+		
+	 	<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/quickstart?useUnicode=true&amp;characterEncoding=utf-8</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">mysql</property>
+		<property name="hibernate.default_catalog">quickstart</property> 
+		
+		
+		<!-- 	-->
+	<!-- 	<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://127.0.0.1/cms?useUnicode=true&amp;characterEncoding=utf-8</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">sql</property>
+		<property name="hibernate.default_catalog">cms</property> 
+	<mapping class="com.shh.org.cms.entity.site.LwVoteRecord"/>
+	<mapping class="com.shh.org.cms.entity.site.LwVoteTopic"/>
+	<mapping class="com.shh.org.cms.entity.site.LwVedio"/>
+	<mapping class="com.shh.org.cms.entity.site.LwContentRecycle"/>
+		-->
+	 	
+<mapping class=" org.springside.examples.quickstart.entity.User"/>
+<mapping class=" org.springside.examples.quickstart.entity.Task"/>
+
+	</session-factory>
+</hibernate-configuration>
